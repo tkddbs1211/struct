@@ -14,7 +14,7 @@ struct employee {
 int main()
 {
     FILE* fp;
-    employee student[N];
+    struct employee student[N];
     srand(time(NULL));
     int studentcode;
     int grade,avg;
