@@ -49,21 +49,21 @@ int main()
         }
     }
     avg = sum / N;
-    int best_student_idx = 0;
-    int worst_student_idx = 0;
+    int best = 0;
+    int worst = 0;
 
     for (int i = 1; i < N; i++) {
-        if (student[i].grade > student[best_student_idx].grade) {
-            best_student_idx = i;
+        if (student[i].grade > student[best].grade) {
+            best = i;
         }
 
-        if (student[i].grade < student[worst_student_idx].grade) {
-            worst_student_idx = i;
+        if (student[i].grade < student[worst].grade) {
+            worst = i;
         }
     }
 
-    printf("최고점 학생(학번,점수) : %s(%d, %d)\n", student[best_student_idx].name, student[best_student_idx].studentcode, student[best_student_idx].grade);
-    printf("최저점 학생(학번,점수) : %s(%d, %d)\n", student[worst_student_idx].name,student[worst_student_idx].studentcode, student[worst_student_idx].grade);
+    printf("최고점 학생(학번,점수) : %s(%d, %d)\n", student[best].name, student[best].studentcode, student[best].grade);
+    printf("최저점 학생(학번,점수) : %s(%d, %d)\n", student[worst].name,student[worst].studentcode, student[worst].grade);
     printf("평균 : %d\n", avg);
     fclose(fp);
 
