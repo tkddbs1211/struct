@@ -62,9 +62,9 @@ int main()
         }
     }
 
-    printf("최고점 학생(학번,점수) : %s(%d, %d), 최저점 학생(학번,점수) : %s(%d, %d), 평균 : %d", student[best_student_idx].name, student[best_student_idx].studentcode, 
-        student[best_student_idx].grade, student[worst_student_idx].name,student[worst_student_idx].studentcode,student[worst_student_idx].grade, avg);
-    
+    printf("최고점 학생(학번,점수) : %s(%d, %d)\n", student[best_student_idx].name, student[best_student_idx].studentcode, student[best_student_idx].grade);
+    printf("최저점 학생(학번,점수) : %s(%d, %d)\n", student[worst_student_idx].name,student[worst_student_idx].studentcode, student[worst_student_idx].grade);
+    printf("평균 : %d\n", avg);
     fclose(fp);
 
     return 0;
